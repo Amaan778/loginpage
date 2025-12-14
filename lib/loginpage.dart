@@ -9,6 +9,10 @@ class loginpage extends StatefulWidget {
 
 class _loginpageState extends State<loginpage> {
   bool showpassword = true;
+  TextEditingController userlogin = TextEditingController();
+  TextEditingController password = TextEditingController();
+  bool islogin = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +22,7 @@ class _loginpageState extends State<loginpage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              controller: userlogin,
               decoration: InputDecoration(
                 fillColor: Colors.blue,
                 filled: true,
@@ -31,6 +36,7 @@ class _loginpageState extends State<loginpage> {
             SizedBox(height: 10),
 
             TextField(
+              controller: password,
               obscureText: showpassword,
               maxLength: 4,
               decoration: InputDecoration(
@@ -40,15 +46,66 @@ class _loginpageState extends State<loginpage> {
                 suffixIcon: GestureDetector(
                   onTap: () {
                     showpassword = !showpassword;
-                    setState(() {
-                      
-                    });
+                    setState(() {});
                   },
-                  child: Icon(Icons.remove_red_eye),
+                  child: GestureDetector(
+                    onTap: () => {print("clicking")},
+                    child: Icon(Icons.remove_red_eye),
+                  ),
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+
+            islogin?
+            TextField(
+              obscureText: showpassword,
+              maxLength: 4,
+              decoration: InputDecoration(
+                counterText: "",
+                fillColor: Colors.blue,
+                filled: true,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    showpassword = !showpassword;
+                    setState(() {});
+                  },
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ):
+            // SizedBox(height: 20),
+
+            SizedBox(height: 10),
+
+            SizedBox(
+              height: 50,
+              width: 250,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.amber,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(0),
+                  ),
+                  elevation: 10,
+                ),
+
+                onPressed: () {
+                  if (userlogin.text == 'amaan' && password.text == '1234') {
+                    print("login success");
+                  } else {
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(SnackBar(content: Text("login failed")));
+                  }
+                },
+                child: Text("Login"),
               ),
             ),
           ],
