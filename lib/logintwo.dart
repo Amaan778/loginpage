@@ -52,7 +52,6 @@ class _logintwoState extends State<logintwo> {
               },
               child: Text(
                 isLogin ? "New user? Sign Up" : "Already an user ? Login",
-                
                 style: TextStyle(decoration: TextDecoration.underline),
               ),
             ),

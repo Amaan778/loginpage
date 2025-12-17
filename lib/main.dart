@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/loginpage.dart';
+import 'package:flutter_application_1/loginpagehw.dart';
 import 'package:flutter_application_1/logintwo.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const loginpage(),
+      home: const loginpagehw(),
     );
   }
 }
