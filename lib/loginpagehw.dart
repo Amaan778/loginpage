@@ -12,14 +12,19 @@ class _loginpagehwState extends State<loginpagehw> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.symmetric(horizontal: 50,vertical: 10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            
+            Text("Sign Up",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 25),),
 
-            Text("Sign Up",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),),
-        
-            Text("enter name"),
+            Padding(
+              padding: EdgeInsets.only(top: 25),
+              child: Text("Email",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey, fontSize: 18),),
+            ),
+
+            TextField(),
           ],
         ),
       ),
