@@ -36,9 +36,7 @@ class _sharedfileState extends State<sharedfile> {
   readData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
   _counter=   prefs.getInt("counter") ?? 0;
-  setState(() {
-    
-  });
+  setState(() {});
   }
 
   @override
