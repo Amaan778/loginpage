@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/logintwo.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -65,7 +63,9 @@ class _dashboardState extends State<dashboard> {
                             pref.clear();
                             Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(builder: (context) => logintwo()),
+                              MaterialPageRoute(
+                                builder: (context) => logintwo(),
+                              ),
                             );
                           },
                           child: Text("Yes"),
@@ -85,6 +85,42 @@ class _dashboardState extends State<dashboard> {
         ),
       ),
       appBar: AppBar(title: Text("Dashboard"), backgroundColor: Colors.yellow),
+
+      body: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                for (int i = 0; i < 12; i++) ...{
+                  Padding(
+                    padding: EdgeInsets.all(10),
+
+                    child: Container(color: Colors.red, height: 80, width: 80),
+                  ),
+                },
+              ],
+            ),
+          ),
+
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: GridView.builder(
+                itemCount: 4,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  crossAxisCount: 2,
+                ),
+                itemBuilder: (context, i) {
+                  return Container(color: Colors.red);
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
