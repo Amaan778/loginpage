@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+
+class Dashboardtwo extends StatefulWidget {
+  const Dashboardtwo({super.key});
+
+  @override
+  State<Dashboardtwo> createState() => _DashboardtwoState();
+}
+
+class _DashboardtwoState extends State<Dashboardtwo> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Login app")),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  for (int i = 0; i < 12; i++) ...{
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        color: Colors.blue,
+                        width: 50,
+                        height: 80,
+                      ),
+                    ),
+                  },
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 4,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                ),
+                itemBuilder: (context, i) {
+                  return Container(
+                  decoration: BoxDecoration(image:DecorationImage(image: AssetImage("assets/logosplash.png"),
+                  fit: BoxFit.cover),
+                  color: Colors.blue,
+                  )
+                  ,);
+                },
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.red
+                ),
+                height: 200, width: 100,),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
