@@ -23,7 +23,11 @@ class _DashboardtwoState extends State<Dashboardtwo> {
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: Container(
-                        color: Colors.blue,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: AssetImage("assets/logosplash.png"),fit: BoxFit.cover),
+                          color: Colors.blue
+                          
+                        ),
                         width: 50,
                         height: 80,
                       ),
