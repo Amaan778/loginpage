@@ -24,7 +24,7 @@ class _DashboardtwoState extends State<Dashboardtwo> {
                       padding: EdgeInsets.all(10),
                       child: Container(
                         decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage("assets/logosplash.png"),fit: BoxFit.cover),
+                          image: DecorationImage(image: AssetImage("assets/mobile.jpeg"),fit: BoxFit.cover),
                           color: Colors.blue
                           
                         ),
@@ -50,7 +50,7 @@ class _DashboardtwoState extends State<Dashboardtwo> {
                 ),
                 itemBuilder: (context, i) {
                   return Container(
-                  decoration: BoxDecoration(image:DecorationImage(image: AssetImage("assets/logosplash.png"),
+                  decoration: BoxDecoration(image:DecorationImage(image: AssetImage("assets/acesories.jpeg"),
                   fit: BoxFit.cover),
                   color: Colors.blue,
                   )
@@ -63,9 +63,10 @@ class _DashboardtwoState extends State<Dashboardtwo> {
               padding: const EdgeInsets.all(10.0),
               child: Container(
                 decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/banner.jpg"), fit: BoxFit.cover),
                   color: Colors.red
                 ),
-                height: 200, width: 100,),
+                height: 200, width: double.infinity),
             ),
           ],
         ),
