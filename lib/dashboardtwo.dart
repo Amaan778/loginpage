@@ -52,9 +52,6 @@ class _DashboardtwoState extends State<Dashboardtwo> {
                   return Container(
                   decoration: BoxDecoration(image:DecorationImage(image: AssetImage("assets/acesories.jpeg"),
                   fit: BoxFit.cover),
-
-
-                  
                   color: Colors.blue,
                   )
                   ,);
