@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/dashboard.dart';
-import 'package:flutter_application_1/dashboardtwo.dart';
+import 'package:flutter_application_1/dashboardthree.dart';
+import 'package:flutter_application_1/view/dashboardtwo.dart';
 import 'package:flutter_application_1/loginpage.dart';
 import 'package:flutter_application_1/loginpagehw.dart';
 import 'package:flutter_application_1/logintwo.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Dashboardtwo(),
+      home: dashboardthree(),
     );
   }
 }
