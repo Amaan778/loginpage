@@ -66,9 +66,9 @@ class _dashboardthreeState extends State<dashboardthree> {
             context,
             MaterialPageRoute(builder: (context) => cat(title: "Cover",ofData: [
               Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-               Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-                Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-                 Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
+              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
+              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
+              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
             ],)),
           );
         },
@@ -83,7 +83,8 @@ class _dashboardthreeState extends State<dashboardthree> {
 
       body: Padding(
         padding: const EdgeInsets.all(10),
-        child: Column(
+        child: Column( 
+          
           children: [
             Row(
               children: [
