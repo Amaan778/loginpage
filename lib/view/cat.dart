@@ -22,6 +22,8 @@ class _catState extends State<cat> {
           Column(children: [
             
             Container(
+
+              
               width: 150,
               height: 150,
               decoration: BoxDecoration(image: DecorationImage(image: AssetImage(widget.ofData[i].image))),),
