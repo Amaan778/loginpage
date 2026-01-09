@@ -20,10 +20,7 @@ class _catState extends State<cat> {
       children: [
         for(int i=0;i<widget.ofData.length;i++)...{
           Column(children: [
-            
             Container(
-
-              
               width: 150,
               height: 150,
               decoration: BoxDecoration(image: DecorationImage(image: AssetImage(widget.ofData[i].image))),),
