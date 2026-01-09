@@ -29,16 +29,16 @@ class _dashboardthreeState extends State<dashboardthree> {
         },
       ),
       Basemodel(
-        name: "Accesories",
+        name: "Watches",
         image: "assets/acesories.jpeg",
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => cat(title: "Accessories",ofData: [
-              Basemodel(name:"Accesories", image:"assets/acesories.jpeg", onPressed: () =>()),
-              Basemodel(name:"Accesories", image:"assets/acesories.jpeg", onPressed: () =>()),
-              Basemodel(name:"Accesories", image:"assets/acesories.jpeg", onPressed: () =>()),
-              Basemodel(name:"Accesories", image:"assets/acesories.jpeg", onPressed: () =>()),
+              Basemodel(name:"Analog watch", image:"assets/analogwatch.png", onPressed: () =>()),
+              Basemodel(name:"Digital watch", image:"assets/digitalwatch.png", onPressed: () =>()),
+              Basemodel(name:"Smart watch", image:"assets/smartwatch.png", onPressed: () =>()),
+              Basemodel(name:"Chronograph watch", image:"assets/chronographwatch.png", onPressed: () =>()),
             ],)),
           );
         },
