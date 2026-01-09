@@ -59,16 +59,16 @@ class _dashboardthreeState extends State<dashboardthree> {
         },
       ),
       Basemodel(
-        name: "Cover",
-        image: "assets/cover.png",
+        name: "Fruits",
+        image: "assets/pinapple.png",
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => cat(title: "Cover",ofData: [
-              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
-              Basemodel(name:"Cover", image:"assets/cover.png", onPressed: () =>()),
+              Basemodel(name:"apple", image:"assets/apple.png", onPressed: () =>()),
+              Basemodel(name:"Pineapple", image:"assets/pinapple.png", onPressed: () =>()),
+              Basemodel(name:"banana", image:"assets/banana.png", onPressed: () =>()),
+              Basemodel(name:"orange", image:"assets/orange.jpg", onPressed: () =>()),
             ],)),
           );
         },
